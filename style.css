@@ -238,7 +238,7 @@ p {
 
     #threeButtons{
         position: absolute;
-        top: 47%;
+        top: 50%;
         width: 90vw;
         display: flex;
         justify-content: space-evenly;
