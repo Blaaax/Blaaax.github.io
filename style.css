@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+header {
+    /* height: 54px; */
+    height: 8vh;
+    padding: 0 64px;
+    border-bottom: 2px solid rgba(0,0,0,.12);
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-size: 2em;
+    width: 100vw;
+}
+.mainBox {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f8f5;
+    align-items: center;
+    padding-top: 40px;
+    /* justify-content: center; */
+    
+}
+.lowerbox{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    /* background: blue; */
+    width: 100vw;
+}
+/* TEXTBOX ======================================= */
+.textarea {
+    background-color: #ffffff;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.274);
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.4;
+    /* width: 200px;
+    height: 100px; */
+    width: 45vw;
+    /* height: 190px; */
+    height: 200px;
+    /* height: 30vh; */
+    transition: all 0.2s;
+    resize: none;
+}
+.textarea:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+.second-text{ background-color: #eeeeee; }
+.textarea:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+    border-width: 1px;
+}
+/* BUTTONS ======================================= */
+.fill {
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 3.5vw 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+}  
+/* Color */
+.fill::after {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}  
+.fill:hover::after{
+    top: 0px;
+    left: 0px;
+}
+/* Each button */
+.encrypt::after{
+    background-color: #afeeee;
+}
+.decrypt::after{
+    background-color: #87cefa;
+    top: -7px;
+}
+.AES::after{
+    background-color: #87cefa;
+    left: -7px;
+}
+.cesar::after{
+    background-color: #b0e0e6;
+    top: -7px;
+    left: -7px;
+}
+.selected::after{
+    top: 0px;
+    left: 0px;
+}
+/* Buttons box */
+.upperbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding-left: 3.3vw;
+    /* padding-right: 3.3vw; */
+}
+ul{
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0px;
+}
+li{ margin-right: 3vw; }
+
+/* INPUT KEY */
+.group 			  { 
+    position:relative; 
+    /* margin-bottom:45px;  */
+}
+input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100px;
+    border:none;
+    border-bottom:1px solid #757575;
+    background-color: transparent;
+}
+input:focus { outline:none; }
+  
+/* LABEL ======================================= */
+label {
+    color:#999999; 
+    font-size:18px;
+    font-weight: 550;
+    width: 6em;
+    position:absolute;
+    pointer-events:none;
+    left:0px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+  
+/* active state */
+input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:14px;
+    color:#87cefa;
+    font-weight: 550;
+}
+  
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:100px }
+.bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#87cefa; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%; 
+}
+  /* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+p {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.parragraph {
+    display: flex;
+    justify-content: space-between;
+    /* width: 50vw; */
+}
+
+@media (max-width: 654px){
+    h1{
+        font-size: 1.7em;
+    }
+    .fill {
+        width: 25.5vw;
+    }
+    .fill::after {
+        width: 25vw;
+    }    
+    .encrypt, .decrypt{
+        width: 23.5vw;
+        padding: 13px 1px 13px;
+    }   
+    .encrypt::after, .decrypt::after{
+        width: 23vw;
+    }
+
+    #method {
+        position: absolute;
+        left: 30px;
+        top: 10%;
+        width: 60vw;
+        justify-content: space-between;
+    }
+    .lowerbox{
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+        padding-top: 13%;
+        height: 70vh;
+    }
+    .textarea {
+        padding: 0.7em;
+        font-size: 1.6em;
+        line-height: 1.4;
+        width: 80vw;
+        height: 200px;
+    }
+
+    #threeButtons{
+        position: absolute;
+        /* left: 30px; */
+        top: 47%;
+        width: 90vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptar y desencriptar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Encriptador de Texto</h1>
+    </header>
+
+    <div class="mainBox">
+        <div class="upperbox">
+            <ul id="threeButtons">
+                <li>
+                    <button class="encrypt fill" id="encrypt" onclick="encryptfunc()">Encrypt</button>
+                </li>
+                <li>
+                    <button class="decrypt fill" onclick="decryptfunc()" id="decrypt">Decrypt</button>
+                </li>
+                <li>
+                    <div class="group">  
+                        <input type="text" id="key" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Clave a usar</label>
+                    </div>
+                </li>
+            </ul>
+            <ul id="method">
+                <li>
+                    <button class="btn--method cesar fill selected" id="Cesar">Cesar</button>
+                </li>
+                <li>
+                    <button class="btn--method AES fill" id="AES">AES</button>
+                </li>
+            </ul>
+        </div>
+        <div class="lowerbox">           
+                <!-- cols="30" rows="10" -->
+            <textarea class="textarea" name="text" id="text"></textarea>
+            <textarea class="textarea second-text" name="" id="second-text" readonly placeholder="Resultado"></textarea>
+        </div>
+        <div class="text">
+            <p>Elegir metodo de cifrado (Cifrado Cesar o Cifrado AES)</p>
+            <br>
+            <div class="parragraph">
+                <p>Para cifrado Cesar usar de clave un numero entre 1-50.</p>
+                <p>Para cifrado AES usar clave de preferencia.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+</body>
+</html>
