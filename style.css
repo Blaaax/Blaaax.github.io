@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 header {
-    /* height: 54px; */
     height: 8vh;
     padding: 0 64px;
     border-bottom: 2px solid rgba(0,0,0,.12);
@@ -22,14 +21,11 @@ h1{
     background-color: #f5f8f5;
     align-items: center;
     padding-top: 40px;
-    /* justify-content: center; */
-    
 }
 .lowerbox{
     display: flex;
     justify-content: space-evenly;
     padding: 30px;
-    /* background: blue; */
     width: 100vw;
 }
 /* TEXTBOX ======================================= */
@@ -45,12 +41,8 @@ h1{
     font-weight: 500;
     font-size: 17px;
     line-height: 1.4;
-    /* width: 200px;
-    height: 100px; */
     width: 45vw;
-    /* height: 190px; */
-    height: 200px;
-    /* height: 30vh; */
+    height: 200px;    
     transition: all 0.2s;
     resize: none;
 }
@@ -122,7 +114,6 @@ h1{
     align-items: center;
     width: 100vw;
     padding-left: 3.3vw;
-    /* padding-right: 3.3vw; */
 }
 ul{
     list-style: none;
@@ -134,7 +125,6 @@ li{ margin-right: 3vw; }
 /* INPUT KEY */
 .group 			  { 
     position:relative; 
-    /* margin-bottom:45px;  */
 }
 input {
     font-size:18px;
@@ -202,10 +192,12 @@ p {
 .parragraph {
     display: flex;
     justify-content: space-between;
-    /* width: 50vw; */
 }
 
 @media (max-width: 654px){
+    .mainBox{
+        height: 100vh;
+    }
     h1{
         font-size: 1.7em;
     }
@@ -233,21 +225,19 @@ p {
     .lowerbox{
         flex-direction: column;
         justify-content: space-between;
-        /* align-items: center; */
         padding-top: 13%;
-        height: 70vh;
+        height: 78vh;
     }
     .textarea {
         padding: 0.7em;
         font-size: 1.6em;
         line-height: 1.4;
         width: 80vw;
-        height: 200px;
+        height: 25vh;
     }
 
     #threeButtons{
         position: absolute;
-        /* left: 30px; */
         top: 47%;
         width: 90vw;
         display: flex;
